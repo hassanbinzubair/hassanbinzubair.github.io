@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan Bin Zubair - Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Hassan Bin Zubair</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#repositories">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img id="profile-avatar" class="hero-avatar" src="" alt="Profile Avatar">
+            <h1>Hassan Bin Zubair</h1>
+            <p class="hero-subtitle">Full Stack Web Developer & Programmer</p>
+            <p class="hero-description">Turning complex problems into elegant code. Passionate about building scalable apps and new tech.</p>
+            <div class="hero-buttons">
+                <a href="#repositories" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span id="repos-count" class="stat-number">0</span>
+                <span class="stat-label">Repositories</span>
+            </div>
+            <div class="stat">
+                <span id="followers-count" class="stat-number">0</span>
+                <span class="stat-label">Followers</span>
+            </div>
+            <div class="stat">
+                <span id="gists-count" class="stat-number">0</span>
+                <span class="stat-label">Gists</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p id="about-bio">Loading bio...</p>
+                    <div class="social-links">
+                        <a id="github-link" href="#" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a id="twitter-link" href="#" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a id="linkedin-link" href="#" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a id="email-link" href="#" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3>Experience</h3>
+                        <p>Building scalable web applications</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Focus</h3>
+                        <p>Full Stack Development</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Passion</h3>
+                        <p>New Technologies & Innovation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">Webpack</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="repositories" class="repositories">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div id="repos-container" class="repos-grid">
+                <div class="loading">Loading repositories...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Interested in collaborating or have a project in mind? Feel free to reach out!</p>
+            <div class="contact-methods">
+                <a href="#" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p id="contact-email">hassan@example.com</p>
+                </a>
+                <a href="#" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>@hassanbinzubair</p>
+                </a>
+                <a href="#" class="contact-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Portfolio</h3>
+                    <p>github.io</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Hassan Bin Zubair. All rights reserved.</p>
+            <p>Built with <i class="fas fa-heart"></i> using modern web technologies</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
