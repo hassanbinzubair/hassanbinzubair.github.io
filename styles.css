@@ -733,4 +733,7 @@ body {
   .social-links {
     justify-content: center;
   }
+  .repo-card {
+    width: 80vw;
+  }
 }

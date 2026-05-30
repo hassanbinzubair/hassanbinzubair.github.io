@@ -229,3 +229,5 @@ if (document.readyState === 'loading') {
 } else {
     init();
 }
+let year = new Date().getFullYear();
+document.getElementById('footer-year').textContent = year;
