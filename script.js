@@ -130,3 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     date.textContent = new Date().getFullYear();
   }
 });
+var typed = new Typed("#element", {
+  strings: ["Web Developer", "Web Designer", "Programmer", "Coder", "Content Writer", "Video Editer","Graphic Designer","Photo Editer", "Freelancer"],
+  typeSpeed: 50,
+});
