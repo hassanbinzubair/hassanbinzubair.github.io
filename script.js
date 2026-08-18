@@ -1,1 +1,132 @@
-const username="hassanbinzubair",githubApiUrl=`https://api.github.com/users/${username}`;async function fetchUserData(){try{const e=await fetch(githubApiUrl),t=await e.json();return document.getElementById("repos-count").textContent=t.public_repos||0,document.getElementById("followers-count").textContent=t.followers||0,document.getElementById("gists-count").textContent=t.public_gists||0,document.getElementById("profile-avatar").src=t.avatar_url,document.getElementById("about-bio").textContent=t.bio||"Full Stack Web Developer | Passionate about building scalable applications",t.html_url&&(document.getElementById("github-link").href=t.html_url),t.twitter_username&&(document.getElementById("twitter-link").href=`https://twitter.com/${t.twitter_username}`),t.blog&&(document.getElementById("linkedin-link").href=t.blog),t.email&&(document.getElementById("email-link").href=`mailto:${t.email}`,document.getElementById("contact-email").textContent=t.email),t}catch(e){}}async function fetchRepositories(){try{const e=await fetch(`${githubApiUrl}/repos?sort=stars&direction=desc&per_page=6`),t=await e.json(),n=document.getElementById("repos-container");if(n.innerHTML="",0===t.length)return void(n.innerHTML='<div class="loading">No repositories found</div>');t.forEach(((e,t)=>{const a=createRepoCard(e);n.appendChild(a),setTimeout((()=>{a.style.opacity="1"}),100*t)}))}catch(e){document.getElementById("repos-container").innerHTML='<div class="loading">Error loading repositories</div>'}}function createRepoCard(e){const t=document.createElement("div");t.className="repo-card",t.style.opacity="0",t.style.transition="opacity 0.6s ease-out";const n=e.language||"Unknown",a=e.stargazers_count||0,s=e.forks_count||0;return t.innerHTML=`\n        <div class="repo-header">\n            <a href="${e.html_url}" target="_blank" class="repo-name" title="${e.full_name}">\n                <i class="fas fa-code-branch"></i> ${e.name}\n            </a>\n            <span class="repo-visibility">${e.private?"Private":"Public"}</span>\n        </div>\n        \n        <p class="repo-description">${e.description||"No description available"}</p>\n        \n        ${"null"!==n?`<span class="repo-language">\n            <i class="fas fa-circle"></i> ${n}\n        </span>`:""}\n        \n        <div class="repo-stats">\n            <span class="repo-stat">\n                <i class="fas fa-star"></i> ${a}\n            </span>\n            <span class="repo-stat">\n                <i class="fas fa-code-branch"></i> ${s}\n            </span>\n            <span class="repo-stat">\n                <i class="fas fa-circle"></i> ${e.watchers||0}\n            </span>\n        </div>\n        \n        <div class="repo-links">\n            <a href="${e.html_url}" target="_blank" class="repo-link">\n                <i class="fas fa-external-link-alt"></i> View\n            </a>\n            ${e.homepage?`\n                <a href="${e.homepage}" target="_blank" class="repo-link">\n                    <i class="fas fa-globe"></i> Website\n                </a>\n            `:""}\n        </div>\n    `,t}function setupMobileMenu(){const e=document.querySelector(".hamburger"),t=document.querySelector(".nav-menu");e&&(e.addEventListener("click",(()=>{t.classList.toggle("active"),e.classList.toggle("active")})),document.querySelectorAll(".nav-menu a").forEach((n=>{n.addEventListener("click",(()=>{t.classList.remove("active"),e.classList.remove("active")}))})))}function setupSmoothScroll(){document.querySelectorAll('a[href^="#"]').forEach((e=>{e.addEventListener("click",(function(e){const t=this.getAttribute("href");if("#"!==t){e.preventDefault();const n=document.querySelector(t);n&&n.scrollIntoView({behavior:"smooth",block:"start"})}}))}))}function setupIntersectionObserver(){const e=new IntersectionObserver((t=>{t.forEach((t=>{t.isIntersecting&&(t.target.style.animation="fadeInUp 0.6s ease-out forwards",e.unobserve(t.target))}))}),{threshold:.1,rootMargin:"0px 0px -100px 0px"});document.querySelectorAll(".repo-card, .stat-box, .skill-category").forEach((t=>{e.observe(t)}))}function setupActiveNav(){window.addEventListener("scroll",(()=>{let e="";document.querySelectorAll("section").forEach((t=>{const n=t.offsetTop;t.clientHeight;pageYOffset>=n-200&&(e=t.getAttribute("id"))})),document.querySelectorAll(".nav-menu a").forEach((t=>{t.classList.remove("active"),t.getAttribute("href")===`#${e}`&&t.classList.add("active")}))}))}async function init(){setupMobileMenu(),setupSmoothScroll(),setupActiveNav(),await fetchUserData(),await fetchRepositories(),setTimeout((()=>{setupIntersectionObserver()}),100)}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",init):init();let year=(new Date).getFullYear();document.getElementById("footer-year").textContent=year;
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("nav-menu");
+if (hamburger && menu) {
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const open = menu.classList.toggle("active");
+    hamburger.setAttribute("aria-expanded", open);
+  });
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+      hamburger.setAttribute("aria-expanded", "false");
+    });
+  });
+  document.addEventListener("click", (e) => {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove("active");
+      hamburger.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+const username = "hassanbinzubair";
+async function fetchAllGithubRepos() {
+  const container = document.getElementById("projects-grid");
+  if (!container) return;
+  try {
+    const response = await fetch(
+      `https://api.github.com/users/${username}/repos?per_page=100&sort=updated`,
+    );
+    if (!response.ok) {
+      throw new Error("GitHub request failed");
+    }
+    const repos = await response.json();
+    if (!repos.length) {
+      container.innerHTML = `
+        <div class="loading">
+          No public projects found yet.
+        </div>
+      `;
+      return;
+    }
+    container.innerHTML = repos
+      .map(
+        (repo) => `
+        <article class="project-card">
+          <div class="project-header">
+            <h3>
+              ${escapeHtml(repo.name)}
+            </h3>
+            <span class="project-visibility">
+              ${repo.private ? "Private" : "Public"}
+            </span>
+          </div>
+          <p class="project-description">
+            ${escapeHtml(repo.description || "No description available.")}
+          </p>
+          <div class="project-tags">
+            ${
+              repo.language
+                ? `
+                  <span>
+                    ${escapeHtml(repo.language)}
+                  </span>
+                `
+                : ""
+            }
+            ${
+              repo.stargazers_count
+                ? `
+                  <span>
+                    ★ ${repo.stargazers_count}
+                  </span>
+                `
+                : ""
+            }
+            ${
+              repo.forks_count
+                ? `
+                  <span>
+                    ⑂ ${repo.forks_count}
+                  </span>
+                `
+                : ""
+            }
+          </div>
+          <div class="project-links">
+            <a
+              href="${repo.html_url}"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub ↗
+            </a>
+            ${
+              repo.homepage
+                ? `
+                  <a
+                    href="${repo.homepage}"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live ↗
+                  </a>
+                `
+                : ""
+            }
+          </div>
+        </article>
+      `,
+      )
+      .join("");
+  } catch (error) {
+    container.innerHTML = `
+      <div class="loading">
+        Projects could not be loaded right now.
+        Please visit my GitHub profile.
+      </div>
+    `;
+  }
+}
+function escapeHtml(value) {
+  const div = document.createElement("div");
+  div.textContent = value;
+  return div.innerHTML;
+}
+document.addEventListener("DOMContentLoaded", () => {
+  fetchAllGithubRepos();
+  const date = document.querySelector(".date");
+  if (date) {
+    date.textContent = new Date().getFullYear();
+  }
+});

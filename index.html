@@ -1,1 +1,257 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="shortcut icon" href="https://i.postimg.cc/GmZ6P1JM/My-Profile-Logo-Round-border.png" type="image" /><title>Hassan Bin Zubair - Full Stack Developer</title><link rel="stylesheet" href="styles.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></head><body><nav class="navbar"><div class="nav-container"><div class="logo">Hassan Bin Zubair</div><ul class="nav-menu"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#repositories">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul><div class="hamburger"><span></span><span></span><span></span></div></div></nav><header><a rel="me" href="https://mastodon.social/@hassanbinzubair"></a></header><section id="home" class="hero"><div class="hero-content"><img id="profile-avatar" class="hero-avatar" src="" alt="Profile Avatar" /><h1>Hassan Bin Zubair</h1><p class="hero-subtitle">Full Stack Web Developer & Programmer</p><p class="hero-description">Turning complex problems into elegant code. Passionate about building scalable apps and new tech. </p><div class="hero-buttons"><a href="#repositories" class="btn btn-primary">View My Work</a><a href="#contact" class="btn btn-secondary">Get In Touch</a></div></div><div class="hero-stats"><div class="stat"><span id="repos-count" class="stat-number">0</span><span class="stat-label">Repositories</span></div><div class="stat"><span id="followers-count" class="stat-number">0</span><span class="stat-label">Followers</span></div><div class="stat"><span id="gists-count" class="stat-number">0</span><span class="stat-label">Gists</span></div></div></section><section id="about" class="about"><div class="container"><h2>About Me</h2><div class="about-content"><div class="about-text"><p id="about-bio">Loading bio...</p><div class="social-links"><a id="github-link" href="https://github.com/hassanbinzubair" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a id="twitter-link" href="https://x.com/@IbneZubair5" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a id="linkedin-link" href="https://www.linkedin.com/in/hassan-bin-zubair-12508540a" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a><a id="email-link" href="mailto:hassanbinzubair5@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="about-stats"><div class="stat-box"><h3>Experience</h3><p>Building scalable web applications</p></div><div class="stat-box"><h3>Focus</h3><p>Full Stack Development</p></div><div class="stat-box"><h3>Passion</h3><p>New Technologies & Innovation</p></div></div></div></div></section><section id="skills" class="skills"><div class="container"><h2>Technical Skills</h2><div class="skills-grid"><div class="skill-category"><h3>Frontend</h3><div class="skill-tags"><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">Bootstrap</span><span class="skill-tag">Tailwind CSS</span></div></div><div class="skill-category"><h3>Backend</h3><div class="skill-tags"><span class="skill-tag">Node.js</span><span class="skill-tag">Express</span><span class="skill-tag">Python</span><span class="skill-tag">MongoDB</span><span class="skill-tag">MySQL</span></div></div><div class="skill-category"><h3>Tools & Others</h3><div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">REST APIs</span></div></div></div></div></section><section id="repositories" class="repositories"><div class="container"><h2>Featured Projects</h2><div id="repos-container" class="repos-grid"><div class="loading">Loading repositories...</div></div></div></section><section id="contact" class="contact"><div class="container"><h2>Get In Touch</h2><p>Interested in collaborating or have a project in mind? Feel free to reach out! </p><div class="contact-methods"><a href="mailto:hassanbinzubair5@gmail.com" class="contact-card"><i class="fas fa-envelope"></i><h3>Email</h3><p id="contact-email">hassanbinzubair5@gmail.com</p></a><a href="https://github.com/hassanbinzubair" class="contact-card"><i class="fab fa-github"></i><h3>GitHub</h3><p>@hassanbinzubair</p></a><a href="https://hassanbinzubair.github.io" class="contact-card"><i class="fas fa-globe"></i><h3>Portfolio</h3><p>hassanbinzubair.github.io</p></a></div></div></section><footer class="footer"><div class="container"><p>&copy; <span id="footer-year"></span>Hassan Bin Zubair. All rights reserved.</p><p>Built with <i class="fas fa-heart"></i>using modern web technologies </p></div></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hassan Bin Zubair — Web Developer, Programmer and Creative Technologist from Pakistan."
+    />
+    <meta name="theme-color" content="#08082b" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hassan Bin Zubair | Developer Portfolio</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="webname" href="#home"> &lt; Hassan Bin Zubair/&gt; </a>
+      <button id="hamburger" aria-label="Open navigation" aria-expanded="false">
+        <span class="hamburger_line"></span>
+        <span class="hamburger_line"></span>
+        <span class="hamburger_line"></span>
+      </button>
+      <ul id="nav-menu" class="nav-menu">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <span class="eyebrow"> WELCOME TO MY PORTFOLIO </span>
+          <h1>
+            Hi, I'm
+            <span id="myname">Hassan Bin Zubair</span>
+          </h1>
+          <p class="hero-role">A passionate <span id="element"></span></p>
+          <p class="hero-text">
+            I build modern websites, software projects and creative digital
+            experiences while continuously learning new technologies.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#projects">
+              View Projects
+              <span>→</span>
+            </a>
+            <a class="secondary-btn" href="#contact"> Let's Connect </a>
+          </div>
+          <div class="mini-stats">
+            <div>
+              <strong>18+</strong>
+              <span>Technologies</span>
+            </div>
+            <div>
+              <strong>∞</strong>
+              <span>Learning</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>Passion</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <div class="glow"></div>
+          <img
+            draggable="false"
+            src="Images/My Photo.png"
+            alt="Hassan Bin Zubair"
+          />
+          <span class="floating-badge badge-one"> {"&lt;/&gt;"} </span>
+          <span class="floating-badge badge-two"> ✦ </span>
+        </div>
+      </section>
+      <section id="about" class="section about-section">
+        <div class="section-heading">
+          <span>01</span>
+          <h2>About Me</h2>
+          <i></i>
+        </div>
+        <div class="about-grid">
+          <article class="info-card">
+            <span class="card-icon"> ✦ </span>
+            <h3>Who I Am</h3>
+            <p>
+              Hello! I'm Hassan Bin Zubair from Pakistan. I'm a dedicated
+              student with a strong passion for coding, computer programming,
+              web development and digital technologies.
+            </p>
+          </article>
+          <article class="info-card">
+            <span class="card-icon"> ⌘ </span>
+            <h3>Education</h3>
+            <p>
+              <strong>Islamic Education:</strong>
+              4th Year student at Jamia-tul-Madina.
+            </p>
+            <p>
+              <strong>Formal Education:</strong>
+              Intermediate / FA student through BISE Lahore.
+            </p>
+          </article>
+          <article class="info-card">
+            <span class="card-icon"> ↗ </span>
+            <h3>My Goal</h3>
+            <p>
+              My goal is to become a professional full-stack developer, build
+              useful digital solutions, and keep improving my technical skills
+              every day.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <span>02</span>
+          <h2>Projects</h2>
+          <i></i>
+        </div>
+        <p class="section-subtitle">
+          A live collection of my public GitHub work.
+        </p>
+        <div id="projects-grid" class="projects-grid">
+          <div class="loading">Loading projects…</div>
+        </div>
+      </section>
+      <section id="skills" class="section">
+        <div class="section-heading">
+          <span>03</span>
+          <h2>Skills & Technologies</h2>
+          <i></i>
+        </div>
+        <p class="section-subtitle">
+          Technologies I work with and continue to explore.
+        </p>
+        <div class="skills">
+          <div class="skill html" title="HTML5"></div>
+          <div class="skill css" title="CSS3"></div>
+          <div class="skill js" title="JavaScript"></div>
+          <div class="skill nodejs" title="Node.js"></div>
+          <div class="skill react" title="React"></div>
+          <div class="skill tailwind" title="Tailwind CSS"></div>
+          <div class="skill mongodb" title="MongoDB"></div>
+          <div class="skill nextjs" title="Next.js"></div>
+          <div class="skill git" title="Git"></div>
+          <div class="skill php" title="PHP"></div>
+          <div class="skill python" title="Python"></div>
+          <div class="skill c" title="C"></div>
+          <div class="skill cpp" title="C++"></div>
+          <div class="skill csharp" title="C#"></div>
+          <div class="skill django" title="Django"></div>
+          <div class="skill java" title="Java"></div>
+          <div class="skill mysql" title="MySQL"></div>
+          <div class="skill kotlin" title="Kotlin"></div>
+        </div>
+      </section>
+      <section id="contact" class="section contact-section">
+        <div class="contactbanner">
+          <div>
+            <span class="eyebrow"> HAVE A PROJECT IN MIND? </span>
+            <h2>Let's Connect</h2>
+            <p>Find me on the platforms below.</p>
+          </div>
+        </div>
+        <div class="contactbtns">
+          <a
+            href="https://github.com/hassanbinzubair"
+            target="_blank"
+            rel="noreferrer"
+            class="contactbtn github"
+            aria-label="GitHub"
+          >
+            <span class="social-icon">GH</span>
+            <span>GitHub</span>
+          </a>
+          <a
+            href="https://instagram.com/hassanbinzubair5"
+            target="_blank"
+            rel="noreferrer"
+            class="contactbtn instagram"
+            aria-label="Instagram"
+          >
+            <span class="social-icon">◎</span>
+            <span>Instagram</span>
+          </a>
+          <a
+            href="https://linkedin.com/in/hassan-bin-zubair-12508540a"
+            target="_blank"
+            rel="noreferrer"
+            class="contactbtn linkedin"
+            aria-label="LinkedIn"
+          >
+            <span class="social-icon">in</span>
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://www.youtube.com/@hassanbinzubairofficial"
+            target="_blank"
+            rel="noreferrer"
+            class="contactbtn youtube"
+            aria-label="YouTube"
+          >
+            <span class="social-icon">▶</span>
+            <span>YouTube</span>
+          </a>
+          <a
+            href="https://tiktok.com/@hassanbinzubair5"
+            target="_blank"
+            rel="noreferrer"
+            class="contactbtn tiktok"
+            aria-label="TikTok"
+          >
+            <span class="social-icon">♪</span>
+            <span>TikTok</span>
+          </a>
+          <a
+            href="mailto:hassanbinzubair5@gmail.com"
+            class="contactbtn gmail"
+            aria-label="Gmail"
+          >
+            <span class="social-icon">M</span>
+            <span>Gmail</span>
+          </a>
+          <a
+            href="mailto:hassanbinzubair5@outlook.com"
+            class="contactbtn outlook"
+            aria-label="Outlook"
+          >
+            <span class="social-icon">O</span>
+            <span>Outlook</span>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>
+        Hassan Bin Zubair &copy;
+        <span class="date"></span>
+        · Built with passion &lt;/&gt;
+      </span>
+    </footer>
+    <script src="typing.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
