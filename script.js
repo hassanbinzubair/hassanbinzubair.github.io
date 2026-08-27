@@ -113,7 +113,7 @@ async function fetchAllGithubRepos() {
     container.innerHTML = `
       <div class="loading">
         Projects could not be loaded right now.
-        Please visit my GitHub profile.
+        Please visit my <a href="https://github.com/hassanbinzubair">GitHub</a> profile.
       </div>
     `;
   }
@@ -131,6 +131,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 var typed = new Typed("#element", {
-  strings: ["Web Developer", "Web Designer", "Programmer", "Coder", "Content Writer", "Video Editer","Graphic Designer","Photo Editer", "Freelancer"],
+  strings: [
+    "Web Developer",
+    "Web Designer",
+    "Programmer",
+    "Coder",
+    "Video Editer",
+    "Graphic Designer",
+    "Photo Editer",
+    "Freelancer",
+  ],
   typeSpeed: 50,
 });
