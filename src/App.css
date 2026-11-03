@@ -295,6 +295,16 @@ footer div a {
 .repotitle {
   text-align: center;
 }
+.loading-status,
+.error-status {
+  padding: 20px;
+  text-align: center;
+  font-weight: 600;
+  min-height: 80vh;
+}
+.error-status {
+  color: #d93025;
+}
 .repos {
   display: flex;
   align-items: center;
