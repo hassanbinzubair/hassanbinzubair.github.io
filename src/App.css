@@ -1,0 +1,423 @@
+/* Styles for Navbar.jsx */
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+}
+.hamburger {
+  height: 30px;
+  width: 40px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.hamline {
+  width: 100%;
+  height: 5px;
+  background-color: var(--main-color);
+}
+.Name {
+  font-family: "Cascadia Code", "Segoe UI";
+  font-weight: 900;
+}
+.Name a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+.Menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+  border-bottom: 2px solid gray;
+}
+.Menu a {
+  height: 100%;
+  color: var(--main-color);
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  transition-duration: var(--hover-transition-duration);
+}
+.Menu a:hover {
+  background-color: var(--main-hover-bg-color);
+}
+
+/* Styles for Home/Welcome */
+.header {
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 3px solid gray;
+  background: url(/codebg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: max(100%, 1000px);
+}
+
+.headerrhs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.headerrhs img {
+  width: 100%;
+  max-width: 600px;
+}
+.headerlhs {
+  color: var(--main-color);
+}
+.headerlhs p {
+  font-size: 22px;
+}
+/* Styles for Home/Aboutme */
+.aboutmetitle {
+  text-align: center;
+  margin: 5px 0px;
+}
+.eduname {
+  font-weight: 800;
+}
+.allaboutme {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.aboutdev,
+.aboutstudy {
+  width: 45%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 180px;
+  border: 2px solid gray;
+  border-radius: 8px;
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  transition: var(--hover-transition-duration);
+}
+.aboutdev:hover,
+.aboutstudy:hover {
+  background-color: var(--main-hover-bg-color);
+}
+
+.aboutstudy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+/* Styles for Home/ExploreWeb */
+.ExploreWeb h1 {
+  text-align: center;
+}
+.ExploreWeb h1 {
+  text-align: center;
+  margin: 5px 0px;
+}
+.explorelinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.explorelinks a {
+  min-width: 230px;
+  min-height: 40px;
+  border-radius: 7px;
+  padding: 0 5px;
+  font-weight: 500;
+  border: 3px solid var(--main-hover-bg-color);
+  text-decoration: none;
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--hover-transition-duration);
+}
+.explorelinks a:hover {
+  background-color: var(--main-hover-bg-color);
+  border-color: var(--main-bg-color);
+}
+/* Styles for Footer */
+.footer {
+  margin-top: 10px;
+  background-color: black;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.linkfooter {
+  padding-top: 10px;
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.linkfooter a {
+  text-decoration: none;
+  color: var(--main-color);
+  transition: var(--hover-transition-duration);
+}
+.linkfooter a:hover {
+  color: var(--main-hover-bg-color);
+}
+.linksp span {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.linksp span a {
+  padding: 6px;
+}
+footer {
+  height: 50px;
+  width: 100%;
+  background-color: var(--main-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+footer div a {
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: 600;
+}
+.linkspplatforms > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.linkspplatforms > div > span > a {
+  font-size: 30px;
+}
+/* Styles for About */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: large;
+  gap: 10px;
+  margin: auto;
+  width: 70vw;
+  text-align: center;
+}
+.about img {
+  width: 90vw;
+  max-width: 500px;
+  border: 5px solid var(--main-bg-color);
+  border-radius: 7px;
+}
+.about button {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-bg-color);
+  border: 2px solid var(--main-hover-bg-color);
+  border-radius: 7px;
+  transition: var(--hover-transition-duration);
+}
+.about button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: 700;
+  height: 100%;
+  width: 100%;
+}
+.about button:hover {
+  background-color: var(--main-hover-bg-color);
+  border-color: var(--main-bg-color);
+}
+/* Styles for Contact */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.platforms {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0px;
+}
+.platforms span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90vw;
+  max-width: 300px;
+  height: 300px;
+}
+.platforms span a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 80vw;
+  max-width: 250px;
+  height: 250px;
+  font-size: 180px;
+  color: var(--main-bg-color);
+  transition: var(--hover-transition-duration);
+  border-radius: 10px;
+}
+.platforms span a:hover {
+  background-color: var(--main-hover-bg-color);
+}
+/* Styles for Progects */
+.repotitle {
+  text-align: center;
+}
+.repos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.repo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90vw;
+  min-height: 200px;
+  max-width: 320px;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+  border-radius: 10px;
+  padding: 8px;
+}
+.reponame {
+  text-align: center;
+  overflow: hidden;
+}
+.repopath {
+  text-align: center;
+  color: #b0b0b0;
+  overflow: hidden;
+}
+.repodescription {
+  text-align: center;
+}
+.repolinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.repolinks a{
+  text-decoration: none;
+  color: var(--main-bg-color);
+  padding: 5px;
+  background-color: var(--main-hover-bg-color);
+  border: 1px solid var(--main-bg-color);
+  outline: 1px solid var(--main-hover-bg-color);
+  border-radius: 7px;
+  font-weight: 600;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 650px) {
+  .platforms span a {
+    font-size: 150px;
+  }
+}
+@media (max-width: 650px) {
+  .Name {
+    font-size: 23px;
+  }
+  .Menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 61px;
+    background-color: var(--main-bg-color);
+    width: 100%;
+    height: unset;
+  }
+  .Menu a {
+    height: 50px;
+    width: 100%;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .header {
+    flex-direction: column-reverse;
+  }
+  .headerrhs {
+    width: 100%;
+  }
+  .headerrhs img {
+    min-width: 200px;
+    max-width: 320px;
+  }
+  .headerlhs {
+    text-align: center;
+  }
+  .linkfooter {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .about {
+    width: 90vw;
+  }
+}
+@media (max-width: 750px) {
+  .allaboutme {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .aboutdev,
+  .aboutstudy {
+    width: 80%;
+  }
+}
+@media (max-width: 950px) {
+  .explorelinks {
+    flex-direction: column;
+  }
+  .explorelinks a {
+    width: 80%;
+  }
+}
+@media (min-width: 900px) {
+  .headerlhs h1 {
+    font-size: 50px;
+  }
+  .headerlhs p {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .headerlhs p #element {
+    font-weight: 800;
+  }
+}
+.active {
+  display: flex;
+}
